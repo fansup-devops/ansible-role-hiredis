@@ -1,0 +1,23 @@
+---
+workspace: /usr/local/src
+
+# If hiredis_install_from_source is set to false, these two variables define whether
+# to use an additional repo for the package installation, and which hiredis packages
+# will be installed.
+hiredis_packages:
+  - libhiredis-dev
+
+# If set to TRUE, hiredis will be installed from source, using the version set with
+# the 'hiredis_version' variable instead of using a package.
+hiredis_install_from_source: false
+hiredis_install_path: "/usr"
+hiredis_version: "0.13.3"
+hiredis_github_branch: "master"
+hiredis_github_archive: "master"
+
+# If hiredis is already installed at and older version, force a new source build.
+# Only applies if hiredis_install_from_source is `true`.
+hiredis_install_from_source_force_update: false
+
+# Leave this at it's default.
+hiredis_reinstall_from_source: false
